@@ -1,0 +1,78 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-17 15:34:29 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3934.9ms)
+Completed 200 OK in 6767ms (Views: 5796.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/187596" for 127.0.0.1 at 2014-05-17 15:34:45 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"187596"}
+  Rendered movies/show.html.erb within layouts/application (7097.2ms)
+Completed 200 OK in 8730ms (Views: 7110.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/187596" for 127.0.0.1 at 2014-05-17 15:34:54 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"187596"}
+  Rendered movies/show.html.erb within layouts/application (6350.8ms)
+Completed 200 OK in 7925ms (Views: 6364.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/124905" for 127.0.0.1 at 2014-05-17 15:35:02 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"124905"}
+  Rendered movies/show.html.erb within layouts/application (8511.1ms)
+Completed 200 OK in 10040ms (Views: 8527.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/124905" for 127.0.0.1 at 2014-05-17 15:35:12 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"124905"}
+  Rendered movies/show.html.erb within layouts/application (7851.0ms)
+Completed 200 OK in 9593ms (Views: 7868.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/187596" for 127.0.0.1 at 2014-05-17 15:35:28 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"187596"}
+  Rendered movies/show.html.erb within layouts/application (5865.0ms)
+Completed 200 OK in 7393ms (Views: 5878.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-17 15:35:46 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4469.4ms)
+Completed 200 OK in 4828ms (Views: 4489.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/195589" for 127.0.0.1 at 2014-05-17 15:35:53 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"195589"}
+  Rendered movies/show.html.erb within layouts/application (5869.6ms)
+Completed 200 OK in 7479ms (Views: 5881.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=ble" for 127.0.0.1 at 2014-05-17 15:36:07 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"ble"}
+  Rendered search/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 307ms
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    17: 	<% @movie.each do |movie| %>
+    18: 	<div class="posts">
+    19:         <h1 class="content-subhead">  
+    20:           <%= link_to movie.title, movie_path(movie.id) %> (<%= movie.release_date.to_date.strftime("%Y") %>)
+    21:         </h1>
+    22:         <section class="post">
+    23:           <div class="post-description">
+  app/views/search/index.html.erb:20:in `block in _app_views_search_index_html_erb___610971665_94564710'
+  app/views/search/index.html.erb:17:in `each'
+  app/views/search/index.html.erb:17:in `_app_views_search_index_html_erb___610971665_94564710'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
