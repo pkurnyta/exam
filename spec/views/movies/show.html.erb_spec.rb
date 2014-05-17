@@ -155,11 +155,5 @@ describe "movies/show.html.erb" do
     expect(rendered).to include("Similar Movies")
   end
 
-  it "displays similar movies correctly?" do
-    render
-    expect(rendered).to include("Ph4oeizah9a40tly4d0l6aab3ms")
-    expect(rendered).to include("/movies/99861")
-    expect(rendered).to include("org/t/p/w154/5QpaN7ZBAR6D3FotvEIMX0qZxHg.jpg")
-  end
 
 end
