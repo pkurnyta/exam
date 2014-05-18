@@ -138,5 +138,21 @@ it "displays genres title?" do
     expect(rendered).to include("Casts")
   end
 
+it "displays casts names correctly?" do
+    render
+    expect(rendered).to include("Richard Dreyfuss")
+    expect(rendered).to include("as David Silverman")
+  end
+
+  it "displays casts image correctly?" do
+    render
+    expect(rendered).to include("qJW1IQD4XjzwKfcrP0ESRvDSBar")
+  end
+
+  it "displays similar movies title?" do
+    render
+    expect(rendered).to include("Similar Movies")
+  end
+
 
 end
