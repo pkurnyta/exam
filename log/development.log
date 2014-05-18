@@ -76,3 +76,58 @@ ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
   Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
   Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (19.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 13:50:44 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4114.8ms)
+Completed 200 OK in 4688ms (Views: 4252.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/255278" for 127.0.0.1 at 2014-05-18 13:51:08 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"255278"}
+  Rendered movies/show.html.erb within layouts/application (3687.9ms)
+Completed 200 OK in 5211ms (Views: 3704.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/269358" for 127.0.0.1 at 2014-05-18 13:51:27 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"269358"}
+  Rendered movies/show.html.erb within layouts/application (611.4ms)
+Completed 200 OK in 2690ms (Views: 626.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/195589" for 127.0.0.1 at 2014-05-18 13:51:40 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"195589"}
+  Rendered movies/show.html.erb within layouts/application (5989.9ms)
+Completed 200 OK in 7651ms (Views: 6001.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/124905" for 127.0.0.1 at 2014-05-18 13:52:12 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"124905"}
+  Rendered movies/show.html.erb within layouts/application (9343.3ms)
+Completed 200 OK in 11314ms (Views: 9355.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/124905" for 127.0.0.1 at 2014-05-18 13:52:23 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"124905"}
+  Rendered movies/show.html.erb within layouts/application (9231.6ms)
+Completed 200 OK in 10943ms (Views: 9246.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/124905" for 127.0.0.1 at 2014-05-18 13:52:34 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"124905"}
+  Rendered movies/show.html.erb within layouts/application (9193.8ms)
+Completed 200 OK in 11713ms (Views: 9213.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/268321" for 127.0.0.1 at 2014-05-18 13:53:43 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"268321"}
+  Rendered movies/show.html.erb within layouts/application (5707.7ms)
+Completed 200 OK in 8666ms (Views: 5720.3ms | ActiveRecord: 0.0ms)
