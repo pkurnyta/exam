@@ -16,5 +16,30 @@ describe "people/show.html.erb" do
     render
     expect(rendered).to include("http://image.tmdb.org/t/p/w154/xbhScoMy3P6pK8Eg5V3EbGoxRSg.jpg")
   end
+
+it "displays born title?" do
+    render
+    expect(rendered).to include("Born:")
+  end
+
+  it "displays born correctly?" do
+    render
+    expect(rendered).to include("Basingstoke - Hampshire - England")
+  end
+
+  it "displays birthday title?" do
+    render
+    expect(rendered).to include("Birthday:")
+  end
+
+  it "displays birthday correctly?" do
+    render
+    expect(rendered).to include("1989-04-08")
+  end
+
+  it "displays biography title?" do
+    render
+    expect(rendered).to include("Biography")
+  end
  
 end
