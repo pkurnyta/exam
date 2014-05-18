@@ -81,4 +81,24 @@ it "should return if belongs to collection" do
   it "should return a title" do
     @movie.title.should eq("Squatters")
   end
+
+ it "should title be string" do
+    @movie.title.is_a? String
+  end
+
+  it "should return a revenue" do
+    @movie.revenue.should eq(0)
+  end
+
+  it "should revenue be int" do
+    @movie.revenue.is_a? Integer
+  end
+
+  it "should return a tagline" do
+    @movie.tagline.should eq("Having Nothing Means Having Nothing to Lose")
+  end
+
+  it "should tagline be string" do
+    @movie.tagline.is_a? String
+  end
 end
