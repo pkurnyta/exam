@@ -41,5 +41,27 @@ it "displays born title?" do
     render
     expect(rendered).to include("Biography")
   end
+
+it "displays correct biography?" do
+    render
+    expect(rendered).to include("From Wikipedia, the free encyclopedia Gabriella Zanna Vanessa Anstruther-Gough-Calthorpe,")
+  end
+
+  it "displays homepage title?" do
+    render
+    expect(rendered).to include("Homepage")
+  end
+
+  it "displays known for title?" do
+    render
+    expect(rendered).to include("Known for")
+  end
+
+  it "displays known for correctly?" do
+    render
+    expect(rendered).to include("qJQzjhBeBkQmPgsNbD5qXtC6wMq")
+    expect(rendered).to include("http://image.tmdb.org/t/p/w92/qJQzjhBeBkQmPgsNbD5qXtC6wMq.jpg")
+    expect(rendered).to include("/movies/37565")
+  end
  
 end
