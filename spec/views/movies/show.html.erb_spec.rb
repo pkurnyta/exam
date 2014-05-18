@@ -85,5 +85,29 @@ describe "movies/show.html.erb" do
     expect(rendered).to include("7.5 from 1 voters.")
   end
 
+ it "displays trailer link correctly?" do
+    render
+    expect(rendered).to include("http://www.youtube.com/watch?v=-oWT9RwxhRM")
+  end
+
+  it "displays overview?" do
+    render
+    expect(rendered).to include("Overview")
+  end
+
+  it "displays correct overview?" do
+    render
+    expect(rendered).to include("Imagine you had a chance to live someone else's life... For two young drifters, Jonas and Kelly, their dream comes true when they illegally take residence in an upscale home of a vacationing family. But things start to spiral out of control when the rightful owners, Michael Silverman and his father David, unexpectedly return from overseas. Now Jonas and Kelly are trapped by their own deceptions, leading to a violent, inevitable confrontation between two very different worlds.")
+  end
+
+  it "displays tagline title?" do
+    render
+    expect(rendered).to include("Tagline")
+  end
+
+  it "displays tagline correctly?" do
+    render
+    expect(rendered).to include("Having Nothing Means Having Nothing to Lose")
+  end
 
 end
