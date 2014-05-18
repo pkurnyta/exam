@@ -62,4 +62,23 @@ it "should return if belongs to collection" do
     @movie.homepage.is_a? String
   end
 
+ it "popularity should be int" do
+    @movie.popularity.is_a? Integer
+  end
+
+  it "should return a poster path" do
+    @movie.poster_path.should eq("/tIdDHXa0FKdveIMFUF9GM28mqAp.jpg")
+  end
+
+  it "should poster path be string" do
+    @movie.poster_path.is_a? String
+  end
+
+  it "should return a release date" do
+    @movie.release_date.should eq("2014-05-14")
+  end
+
+  it "should return a title" do
+    @movie.title.should eq("Squatters")
+  end
 end
