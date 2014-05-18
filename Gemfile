@@ -39,8 +39,6 @@ gem 'turbolinks'
 gem 'quiet_assets'
 gem 'awesome_print'
 
-gem 'purecss-rails'
-
 gem 'dotenv-rails', groups: [:development, :test]
 
 

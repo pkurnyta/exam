@@ -1,39 +1,15 @@
-<div id="layout" class="pure-g">
-  
+<h1>Search for a movie</h1>
 
-  <div class="sidebar pure-u-1 pure-u-med-1-4">
-    <div class="header2">
-      <hgroup>
-      <h2 class="movie-tittle">
-		<div class="search_title">Search for a movie</div>
-		<center><%= form_tag("/search", :method => "get") do %>
-  		<%= text_field_tag(:query, nil, :class => "input-xlarge searchInput") %></center>
-		<% end %>
-      </h2>
-      </hgroup>
-    </div>
-  </div>
-</div>
+<%= form_tag("/search", method: :get) do %>
+   <%= text_field_tag :query, nil %>
+<% end %>
 
-  <div class="content pure-u-1 pure-u-med-3-4">
-	<div class="posts">
-        <h1 class="content-subhead">  
-          Now Playing
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            		<% @now_playing.first(15).each do |movie| %>
-			<% if movie %>
-				<%= link_to movie_path(movie['id']) do %>
-					<%= image_tag("#{@configuration.base_url}w154#{movie['poster_path']}") if movie['poster_path'] %>
-				<% end %>
-			<% end %>
-		<% end %>
-          </div> 
-          </div>
-        </section>
-    </div>
+<h1>Now Playing</h1>
 
-  </div>
-</div>
+<% @now_playing.first(10).each do |movie| %>
+  <% if movie %>
+     <%= link_to movie_path(movie['id']) do %>
+       <%= movie_poster movie['poster_path'] %>
+     <% end %>
+  <% end %>
+<% end %>

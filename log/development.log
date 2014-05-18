@@ -282,3 +282,158 @@ Processing by SearchController#index as HTML
   Parameters: {"utf8"=>"✓", "query"=>"Apocalypto"}
   Rendered search/index.html.erb within layouts/application (911.6ms)
 Completed 200 OK in 1234ms (Views: 924.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Apocalypto" for 127.0.0.1 at 2014-05-18 21:15:24 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Apocalypto"}
+  Rendered search/index.html.erb within layouts/application (924.6ms)
+Completed 200 OK in 1727ms (Views: 1284.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 21:15:30 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4020.3ms)
+Completed 200 OK in 4353ms (Views: 4046.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 21:28:43 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4163.1ms)
+Completed 500 Internal Server Error in 4623ms
+
+ActionView::Template::Error (couldn't find file 'purecss'
+  (in /home/leyas/Dokumenty/ruby/my_movies_123/app/assets/stylesheets/application.css:15)):
+    2: <html>
+    3: <head>
+    4:   <title>MyMovies</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7: 
+    8:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1026782041_97845600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (18.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 21:30:27 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4239.7ms)
+Completed 500 Internal Server Error in 4660ms
+
+ActionView::Template::Error (couldn't find file 'purecss'
+  (in /home/leyas/Dokumenty/ruby/my_movies_123/app/assets/stylesheets/application.css:15)):
+    2: <html>
+    3: <head>
+    4:   <title>MyMovies</title>
+    5:   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    6:   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    7: 
+    8:   <%= csrf_meta_tags %>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb___1026782041_97845600'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (24.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 21:32:14 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4495.9ms)
+Completed 200 OK in 4911ms (Views: 4538.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/255278" for 127.0.0.1 at 2014-05-18 21:32:27 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"255278"}
+  Rendered movies/show.html.erb within layouts/application (3829.7ms)
+Completed 200 OK in 5567ms (Views: 3856.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 21:42:57 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3071.5ms)
+Completed 200 OK in 3484ms (Views: 3090.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/255278" for 127.0.0.1 at 2014-05-18 21:48:02 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"255278"}
+  Rendered movies/show.html.erb within layouts/application (2774.0ms)
+Completed 200 OK in 4315ms (Views: 2780.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/255278" for 127.0.0.1 at 2014-05-18 21:50:46 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"255278"}
+  Rendered movies/show.html.erb within layouts/application (2757.1ms)
+Completed 200 OK in 4347ms (Views: 2770.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people/980" for 127.0.0.1 at 2014-05-18 21:50:55 +0200
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"980"}
+  Rendered people/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 610ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people/980" for 127.0.0.1 at 2014-05-18 21:56:06 +0200
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"980"}
+  Rendered people/show.html.erb within layouts/application (2585.4ms)
+Completed 200 OK in 3339ms (Views: 2591.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 21:58:26 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3067.0ms)
+Completed 200 OK in 3381ms (Views: 3072.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=batman" for 127.0.0.1 at 2014-05-18 21:58:34 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"batman"}
+  Rendered search/index.html.erb within layouts/application (18245.3ms)
+Completed 200 OK in 18555ms (Views: 18257.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=batman" for 127.0.0.1 at 2014-05-18 22:00:45 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"batman"}
+  Rendered search/index.html.erb within layouts/application (28353.5ms)
+Completed 200 OK in 28740ms (Views: 28370.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 22:01:14 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3488.4ms)
+Completed 200 OK in 3940ms (Views: 3495.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 22:01:20 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3296.8ms)
+Completed 200 OK in 3668ms (Views: 3303.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 22:02:27 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3083.6ms)
+Completed 200 OK in 3448ms (Views: 3104.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 22:03:08 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (3064.0ms)
+Completed 200 OK in 3398ms (Views: 3079.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/255278" for 127.0.0.1 at 2014-05-18 22:03:16 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"255278"}
+  Rendered movies/show.html.erb within layouts/application (3028.7ms)
+Completed 200 OK in 4561ms (Views: 3040.8ms | ActiveRecord: 0.0ms)

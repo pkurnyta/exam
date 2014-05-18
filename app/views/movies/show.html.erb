@@ -1,182 +1,62 @@
-  <div id="layout" class="pure-g">
-  
+<h3>Poster</h3>
 
-  <div class="sidebar pure-u-1 pure-u-med-1-4">
+<%= movie_poster @movie.poster_path %>
 
-      <h1 class="movie-tittle"><%= @movie.title %></h1>
-      <div class="srodeczek"><%= image_tag("#{@configuration.base_url}w154#{@movie.poster_path}") if @movie.poster_path %></div>
-    <div class="header">
-      <hgroup>
-      <h2 class="brand-tagline">
-      <table class="pure-table">
-        <tr><td>Budget:</td><td> $<%= number_with_delimiter(@movie.budget, :delimiter => ',') %></td></tr>
-        <tr><td>Revenue:</td><td> $<%= number_with_delimiter(@movie.revenue, :delimiter => ',') %></td></tr>
-        <tr><td>Status:</td><td> <%= @movie.status %></td></tr>
-        <tr><td>Runtime:</td><td> <%= @movie.runtime %></td></tr>
-        <tr><td>Release Date:</td><td> <%= @movie.release_date.to_date.strftime("%d/%m/%Y") if @movie.release_date %></td></tr>
-      </table>
-      </h2>
-      </hgroup>
-    </div>
-  </div>
+<h3>Facts</h3>
+<p>Budget: $<%= number_with_delimiter(@movie.budget, :delimiter => ',') %>
+<p>Revenue: $<%= number_with_delimiter(@movie.revenue, :delimiter => ',') %>
+<p>Status: <%= @movie.status %>
+<p>Runtime: <%= @movie.runtime %>
+<p>Release Date: <%= @movie.release_date.to_date.strftime("%d/%m/%Y") if @movie.release_date %>
 
-  <div class="content pure-u-1 pure-u-med-3-4">
-    <div class="posts">
-      <% @trailers['youtube'].each do |trailer| %>
-        <h1 class="content-subhead">  
-          Trailer
-        </h1>
-        <section class="post">
-          <div class="post-description">
-              <%= link_to "#{trailer['name']} - #{trailer['size']}", "http://www.youtube.com/watch?v=#{trailer['source']}" %>
-          </div>
-        </section>
+<h2>Trailers</h2>
+<% @trailers['youtube'].each do |trailer| %>
+  <p><%= link_to "#{trailer['name']} - #{trailer['size']}", "http://www.youtube.com/watch?v=#{trailer['source']}" %>
+<% end %>
+
+<h2><%= @movie.title %></h2>
+<div id="star" data-score="<%= @movie.vote_average %>"></div>
+<p><%= @movie.vote_average %> from <%= @movie.vote_count %> voters.
+
+<h3>Overview</h3>
+<p><%= @movie.overview %>
+
+<h3>Tagline</h3>
+<p><%= @movie.tagline %>
+
+<h3>Images</h3>
+<p>TODO
+
+<h3>Genres</h3>
+<p><% @movie.genres.each do |genre| %>
+  <%= genre['name'] %>
+<% end %>
+
+<h3>Casts</h3>
+<table>
+  <% @cast.first(5).each do |cast| %>
+  <tr>
+    <td>
+      <%= cast_poster cast['profile_path'] %>
+      <% unless cast['profile_path'] %>
+        <img src="http://placehold.it/154x154">
       <% end %>
-    </div>
+    </td>
+    <td>
+      <%= link_to cast['name'], person_path(cast['id']) %> as <%= cast['character'] %>
+    </td>
+  </tr>
+  <% end %>
+</table>
 
-    <div class="posts">
-        <h1 class="content-subhead">  
-          Rating
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            <div id="star" data-score="<%= @movie.vote_average %>"></div>
-            <p><%= @movie.vote_average %> from <%= @movie.vote_count %> voters.</p>
-          </div> 
-          </div>
-        </section>
-    </div>
+<% if @similar_movies %>
+  <h3>Similar Movies</h3>
 
-
-    <div class="posts">
-        <h1 class="content-subhead">  
-          Overview
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            <p><%= @movie.overview %></p>
-          </div> 
-          </div>
-        </section>
-    </div>
-
-    <div class="posts">
-        <h1 class="content-subhead">  
-          Tagline
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            <p><%= @movie.tagline %></p>
-          </div> 
-          </div>
-        </section>
-    </div>
-
-
-    <div class="posts">
-        <h1 class="content-subhead">  
-          Genres
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            <p><p><% @movie.genres.each do |genre| %>
-              <%= genre['name'] %>
-            <% end %></p>
-          </div> 
-          </div>
-        </section>
-    </div>
-
-
-    <div class="posts">
-        <h1 class="content-subhead">  
-          Posters
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            <% @images['posters'].each_with_index do |image| %>
-              <%= image_tag("#{@configuration.base_url}w154#{image['file_path']}") if image['file_path'] %>
-             <% end %>
-            </div> 
-          </div>
-        </section>
-    </div>
-
-
-    <div class="posts">
-        <h1 class="content-subhead">  
-          Backdrops
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            <% @images['backdrops'].each_with_index do |image| %>
-              <%= image_tag("#{@configuration.base_url}w154#{image['file_path']}") if image['file_path'] %>
-             <% end %>
-            </div> 
-          </div>
-        </section>
-    </div>
-
-
-    <div class="posts">
-        <h1 class="content-subhead">  
-          Casts
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-            <table class="malusi">
-            <% @cast.first(5).each do |cast| %>
-            <tr>
-              <td>
-                <%= cast_poster cast['profile_path'] %>
-                <% unless cast['profile_path'] %>
-                  <img src="http://placehold.it/154x154">
-                <% end %>
-              </td>
-              <td>
-                <%= link_to cast['name'], person_path(cast['id']) %> as <%= cast['character'] %>
-              </td>
-            </tr>
-            <% end %>
-          </table>
-          </div> 
-          </div>
-        </section>
-    </div>
-
-    <div class="posts">
-        <h1 class="content-subhead">  
-        Similar Movies
-        </h1>
-        <section class="post">
-          <div class="post-description">
-           <div>
-                <% if @similar_movies %>
-                 <div>
-                   <% @similar_movies.first(8).each do |movie| %>
-                     <% if movie %>
-                        <%= link_to movie_path(movie['id']) do %>
-                          <%= movie_poster movie['poster_path'] %>
-                        <% end %>
-                     <% end %>
-                   <% end %>
-                <% end %>
-          </div> 
-          </div>
-        </section>
-    </div>
-
-
-    </div> 
-
-</div>
-</div>
-
-</div>
+   <% @similar_movies.first(8).each do |movie| %>
+     <% if movie %>
+        <%= link_to movie_path(movie['id']) do %>
+          <%= movie_poster movie['poster_path'] %>
+        <% end %>
+     <% end %>
+   <% end %>
+<% end %>
