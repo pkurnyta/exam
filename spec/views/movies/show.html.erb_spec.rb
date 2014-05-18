@@ -60,5 +60,30 @@ describe "movies/show.html.erb" do
     expect(rendered).to include("106")
   end
 
+ it "displays release date title?" do
+    render
+    expect(rendered).to include("Release Date:")
+  end
+
+  it "displays release date correctly?" do
+    render
+    expect(rendered).to include("14/05/2014")
+  end
+
+  it "displays trailer title correctly?" do
+    render
+    expect(rendered).to include("Trailer - HD")
+  end
+
+  it "displays rating title?" do
+    render
+    expect(rendered).to include("Rating")
+  end
+
+  it "displays rating correctly?" do
+    render
+    expect(rendered).to include("7.5 from 1 voters.")
+  end
+
 
 end
