@@ -101,4 +101,25 @@ it "should return if belongs to collection" do
   it "should tagline be string" do
     @movie.tagline.is_a? String
   end
+
+it "should return a runtime" do
+    @movie.runtime.should eq(106)
+  end
+
+  it "should runtime be int" do
+    @movie.runtime.is_a? Integer
+  end
+
+  it "should return a vote_count" do
+    @movie.vote_count.should eq(1)
+  end
+
+  it "should vote_count be int" do
+    @movie.vote_count.is_a? Integer
+  end
+
+  it "should return a vote_average" do
+    @movie.vote_average.should eq(7.5)
+  end
+
 end
