@@ -34,4 +34,24 @@ before do
     @person.place_of_birth.should eq("New York City, New York, USA")
   end
 
+it "should a place_of_birth be string" do
+    @person.place_of_birth.is_a? String
+  end
+
+  it "should return a biography " do
+    @person.biography.should eq(@person.biography)
+  end
+
+  it "should return a birthday" do
+    @person.birthday.should eq("1990-04-17")
+  end
+
+  it "should a birthday be string" do
+    @person.birthday.is_a? String
+  end
+
+  it "should return a deathday" do
+    @person.deathday.should eq("")
+  end
+
 end
