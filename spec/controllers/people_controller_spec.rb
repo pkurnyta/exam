@@ -26,4 +26,12 @@ before do
     @person.name.should eq("Gia Mantegna")
   end  
 
+  it "should a name be string" do
+    @person.name.is_a? String
+  end
+
+  it "should return a place_of_birth" do
+    @person.place_of_birth.should eq("New York City, New York, USA")
+  end
+
 end
