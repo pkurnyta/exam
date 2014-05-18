@@ -15,7 +15,7 @@ before do
   end
 
   it "should return a imdb id" do
-    @movie.imdb_id.should eq("tt1300854")
+    @movie.imdb_id.should eq("tt2359307")
   end
 
   it "should imdb id be string" do
