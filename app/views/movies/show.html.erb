@@ -3,7 +3,7 @@
 
       
       <h2>
-      <table class="pure-table">
+      <table>
         <tr><td>Budget:</td><td> $<%= number_with_delimiter(@movie.budget, :delimiter => ',') %></td></tr>
         <tr><td>Revenue:</td><td> $<%= number_with_delimiter(@movie.revenue, :delimiter => ',') %></td></tr>
         <tr><td>Status:</td><td> <%= @movie.status %></td></tr>
@@ -20,7 +20,7 @@
       
               <%= link_to "#{trailer['name']} - #{trailer['size']}", "http://www.youtube.com/watch?v=#{trailer['source']}" %>
           
-        <h1 class="content-subhead">
+        <h1>
           Rating
         </h1>
        
@@ -89,7 +89,7 @@
         </h1>
         
                 <% if @similar_movies %>
-                 <div>
+                
                    <% @similar_movies.first(8).each do |movie| %>
                      <% if movie %>
                         <%= link_to movie_path(movie['id']) do %>
