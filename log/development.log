@@ -131,3 +131,47 @@ Processing by MoviesController#show as HTML
   Parameters: {"id"=>"268321"}
   Rendered movies/show.html.erb within layouts/application (5707.7ms)
 Completed 200 OK in 8666ms (Views: 5720.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 14:29:48 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4173.5ms)
+Completed 200 OK in 4609ms (Views: 4190.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=iron+man" for 127.0.0.1 at 2014-05-18 14:29:58 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"iron man"}
+  Rendered search/index.html.erb within layouts/application (14775.9ms)
+Completed 500 Internal Server Error in 15099ms
+
+ActionView::Template::Error (undefined method `strftime' for nil:NilClass):
+    17: 	<% @movie.each do |movie| %>
+    18: 	<div class="posts">
+    19:         <h1 class="content-subhead">  
+    20:           <%= link_to movie.title, movie_path(movie.id) %> (<%= movie.release_date.to_date.strftime("%Y") %>)
+    21:         </h1>
+    22:         <section class="post">
+    23:           <div class="post-description">
+  app/views/search/index.html.erb:20:in `block in _app_views_search_index_html_erb__520804769_96764290'
+  app/views/search/index.html.erb:17:in `each'
+  app/views/search/index.html.erb:17:in `_app_views_search_index_html_erb__520804769_96764290'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.1.1/gems/actionpack-4.1.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (25.9ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=iron+man+3" for 127.0.0.1 at 2014-05-18 14:30:20 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"iron man 3"}
+  Rendered search/index.html.erb within layouts/application (998.8ms)
+Completed 200 OK in 1334ms (Views: 1016.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/68721" for 127.0.0.1 at 2014-05-18 14:30:24 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"68721"}
+  Rendered movies/show.html.erb within layouts/application (16586.0ms)
+Completed 200 OK in 18259ms (Views: 16602.5ms | ActiveRecord: 0.0ms)
