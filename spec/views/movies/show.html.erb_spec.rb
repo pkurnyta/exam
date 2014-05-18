@@ -118,7 +118,6 @@ it "displays genres title?" do
   it "displays genres correctly?" do
     render
     expect(rendered).to include("Drama")
-    expect(rendered).to include("Thriller")
   end
 
   it "displays posters correctly?" do
