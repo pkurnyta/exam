@@ -97,7 +97,7 @@ describe "movies/show.html.erb" do
 
   it "displays correct overview?" do
     render
-    expect(rendered).to include("Imagine you had a chance to live someone else's life...")
+    expect(rendered).to include("Imagine you had a chance to live someone else&#39;s life.")
   end
 
   it "displays tagline title?" do
