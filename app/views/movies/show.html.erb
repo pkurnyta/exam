@@ -1,7 +1,6 @@
-  <h1><%= @movie.title %></h1>
+   <h1><%= @movie.title %></h1>
       <%= image_tag("#{@configuration.base_url}w154#{@movie.poster_path}") if @movie.poster_path %>
-
-      
+   
       <h2>
       <table>
         <tr><td>Budget:</td><td> $<%= number_with_delimiter(@movie.budget, :delimiter => ',') %></td></tr>
@@ -12,31 +11,32 @@
       </table>
       </h2>
       
-  
       <% @trailers['youtube'].each do |trailer| %>
         <h1>
           Trailer
         </h1>
       
               <%= link_to "#{trailer['name']} - #{trailer['size']}", "http://www.youtube.com/watch?v=#{trailer['source']}" %>
-          
+        
+      <% end %>
+    
         <h1>
           Rating
         </h1>
-       
-            <%= @movie.vote_average %>">
+  
+            <%= @movie.vote_average %>
             <p><%= @movie.vote_average %> from <%= @movie.vote_count %> voters.</p>
-          
+        
+
         <h1>
           Overview
         </h1>
-      
+    
             <p><%= @movie.overview %></p>
-      
+         
         <h1>
           Tagline
         </h1>
-     
             <p><%= @movie.tagline %></p>
 
         <h1>
@@ -46,28 +46,27 @@
             <p><p><% @movie.genres.each do |genre| %>
               <%= genre['name'] %>
             <% end %></p>
-          
-        <h1 class="content-subhead">
+  
+        <h1>
           Posters
         </h1>
-        
+       
             <% @images['posters'].each_with_index do |image| %>
               <%= image_tag("#{@configuration.base_url}w154#{image['file_path']}") if image['file_path'] %>
              <% end %>
-            
+       
         <h1>
           Backdrops
         </h1>
-       
+     
             <% @images['backdrops'].each_with_index do |image| %>
               <%= image_tag("#{@configuration.base_url}w154#{image['file_path']}") if image['file_path'] %>
              <% end %>
           
-          
         <h1>
           Casts
         </h1>
-        
+     
             <table>
             <% @cast.first(5).each do |cast| %>
             <tr>
@@ -83,13 +82,13 @@
             </tr>
             <% end %>
           </table>
-         
+    
         <h1>
         Similar Movies
         </h1>
-        
+     
                 <% if @similar_movies %>
-                
+                 
                    <% @similar_movies.first(8).each do |movie| %>
                      <% if movie %>
                         <%= link_to movie_path(movie['id']) do %>
