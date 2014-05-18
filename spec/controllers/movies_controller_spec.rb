@@ -55,7 +55,7 @@ it "should return if belongs to collection" do
   end
 
   it "should return a homepage" do
-    @movie.homepage.should eq("http://marvel.com/squatters")
+    @movie.homepage.should eq("http://www.sonypictures.com/movies/squatters/")
   end
 
   it "should homepage be string" do
