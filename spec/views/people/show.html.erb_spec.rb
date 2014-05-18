@@ -44,7 +44,7 @@ it "displays born title?" do
 
 it "displays correct biography?" do
     render
-    expect(rendered).to include("From Wikipedia, the free encyclopedia Gabriella Zanna Vanessa Anstruther-Gough-Calthorpe,")
+    expect(rendered).to include("From Wikipedia, the free encyclopedia\n\nGabriella Zanna Vanessa Anstruther-Gough-Calthorpe,")
   end
 
   it "displays homepage title?" do
