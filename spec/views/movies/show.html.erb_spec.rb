@@ -110,4 +110,33 @@ describe "movies/show.html.erb" do
     expect(rendered).to include("Having Nothing Means Having Nothing to Lose")
   end
 
+it "displays genres title?" do
+    render
+    expect(rendered).to include("Genres")
+  end
+
+  it "displays genres correctly?" do
+    render
+    expect(rendered).to include("Drama")
+    expect(rendered).to include("Thriller")
+  end
+
+  it "displays posters correctly?" do
+    render
+    expect(rendered).to include("tIdDHXa0FKdveIMFUF9GM28mqAp")
+    expect(rendered).to include("qqO2yoit9t8GCumWq07F9mcYhtL")
+    expect(rendered).to include("3JJmefgV2B683OlIQh6NJYoAJqm")
+  end
+
+  it "displays posters title?" do
+    render
+    expect(rendered).to include("Posters")
+  end
+
+  it "displays casts title?" do
+    render
+    expect(rendered).to include("Casts")
+  end
+
+
 end
