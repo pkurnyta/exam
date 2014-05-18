@@ -122,4 +122,16 @@ it "should return a runtime" do
     @movie.vote_average.should eq(7.5)
   end
 
+ it "should vote_average be int" do
+    @movie.vote_average.is_a? Integer
+  end
+
+  it "should return a status" do
+    @movie.status.should eq("Released")
+  end
+
+  it "should status be string" do
+    @movie.status.is_a? String
+  end
+
 end
