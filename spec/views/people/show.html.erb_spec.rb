@@ -19,7 +19,7 @@ describe "people/show.html.erb" do
 
 it "displays born title?" do
     render
-    expect(rendered).to include("Born:")
+    expect(rendered).to include("Born")
   end
 
   it "displays born correctly?" do
@@ -29,7 +29,7 @@ it "displays born title?" do
 
   it "displays birthday title?" do
     render
-    expect(rendered).to include("Birthday:")
+    expect(rendered).to include("Birthday")
   end
 
   it "displays birthday correctly?" do
@@ -54,7 +54,7 @@ it "displays correct biography?" do
 
   it "displays known for title?" do
     render
-    expect(rendered).to include("Known for")
+    expect(rendered).to include("Known For")
   end
 
   it "displays known for correctly?" do
