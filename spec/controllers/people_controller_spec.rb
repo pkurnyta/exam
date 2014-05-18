@@ -54,4 +54,25 @@ it "should a place_of_birth be string" do
     @person.deathday.should eq("")
   end
 
+it "should a deathday be string" do
+    @person.deathday.is_a? String
+  end
+
+  it "should return a homepage" do
+    @person.homepage.should eq("")
+  end
+
+  it "should a homepage be string" do
+    @person.homepage.is_a? String
+  end
+
+  it "should return a profile_path" do
+    @person.profile_path.should eq("/qbcis4fmbAh4ePt3W9LcXWxAcYx.jpg")
+  end
+
+  it "should a profile_path be string" do
+    @person.profile_path.is_a? String
+  end
+
+
 end
