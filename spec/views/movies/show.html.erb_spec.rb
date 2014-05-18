@@ -97,7 +97,7 @@ describe "movies/show.html.erb" do
 
   it "displays correct overview?" do
     render
-    expect(rendered).to include("Imagine you had a chance to live someone else's life... For two young drifters, Jonas and Kelly, their dream comes true when they illegally take residence in an upscale home of a vacationing family. But things start to spiral out of control when the rightful owners, Michael Silverman and his father David, unexpectedly return from overseas. Now Jonas and Kelly are trapped by their own deceptions, leading to a violent, inevitable confrontation between two very different worlds.")
+    expect(rendered).to include("Imagine you had a chance to live someone else's life...")
   end
 
   it "displays tagline title?" do

@@ -241,3 +241,24 @@ Processing by MoviesController#show as HTML
   Parameters: {"id"=>"268321"}
   Rendered movies/show.html.erb within layouts/application (5675.4ms)
 Completed 200 OK in 7420ms (Views: 5687.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=iron+man+3" for 127.0.0.1 at 2014-05-18 19:09:30 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"iron man 3"}
+  Rendered search/index.html.erb within layouts/application (943.5ms)
+Completed 200 OK in 1301ms (Views: 957.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/68721" for 127.0.0.1 at 2014-05-18 19:09:33 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"68721"}
+  Rendered movies/show.html.erb within layouts/application (16965.1ms)
+Completed 200 OK in 18610ms (Views: 16977.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/268321" for 127.0.0.1 at 2014-05-18 19:11:41 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"268321"}
+  Rendered movies/show.html.erb within layouts/application (5368.1ms)
+Completed 200 OK in 7026ms (Views: 5380.0ms | ActiveRecord: 0.0ms)
