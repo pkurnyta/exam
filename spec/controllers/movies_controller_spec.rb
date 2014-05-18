@@ -42,4 +42,24 @@ it "should return an original title" do
     @movie.backdrop_path.is_a? String
   end
 
+it "should return if belongs to collection" do
+    @movie.belongs_to_collection.blank?
+  end
+
+  it "should return a budget" do
+    @movie.budget.should eq(0)
+  end
+
+  it "should budget be int" do
+    @movie.budget.is_a? Integer
+  end
+
+  it "should return a homepage" do
+    @movie.homepage.should eq("http://marvel.com/squatters")
+  end
+
+  it "should homepage be string" do
+    @movie.homepage.is_a? String
+  end
+
 end
