@@ -35,7 +35,7 @@ it "should return an original title" do
   end
 
   it "should return a backdrop path" do
-    @movie.backdrop_path.should eq("/n9X2DKItL3V0yq1q1jrk8z5UAki.jpg")
+    @movie.backdrop_path.should eq("/iqceRmCpCD2dbkOM8Rw6HzDwGGc.jpg")
   end
 
   it "should backdrop path be string" do
