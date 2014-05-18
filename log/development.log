@@ -215,3 +215,16 @@ Processing by PeopleController#show as HTML
   Parameters: {"id"=>"137424"}
   Rendered people/show.html.erb within layouts/application (2794.4ms)
 Completed 200 OK in 3504ms (Views: 2809.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-18 18:04:09 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (5624.5ms)
+Completed 200 OK in 6156ms (Views: 5640.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/search?utf8=%E2%9C%93&query=Captain+America" for 127.0.0.1 at 2014-05-18 18:04:22 +0200
+Processing by SearchController#index as HTML
+  Parameters: {"utf8"=>"✓", "query"=>"Captain America"}
+  Rendered search/index.html.erb within layouts/application (8088.7ms)
+Completed 200 OK in 8422ms (Views: 8102.1ms | ActiveRecord: 0.0ms)
