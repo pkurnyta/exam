@@ -262,3 +262,10 @@ Processing by MoviesController#show as HTML
   Parameters: {"id"=>"268321"}
   Rendered movies/show.html.erb within layouts/application (5368.1ms)
 Completed 200 OK in 7026ms (Views: 5380.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/people/1014932" for 127.0.0.1 at 2014-05-18 19:56:14 +0200
+Processing by PeopleController#show as HTML
+  Parameters: {"id"=>"1014932"}
+  Rendered people/show.html.erb within layouts/application (1832.8ms)
+Completed 200 OK in 2540ms (Views: 1844.8ms | ActiveRecord: 0.0ms)
