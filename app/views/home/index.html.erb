@@ -1,15 +1,19 @@
-<h1>Search for a movie</h1>
-
-<%= form_tag("/search", method: :get) do %>
-   <%= text_field_tag :query, nil %>
+	Search for a movie
+<center><%= form_tag("/search", :method => "get") do %>
+   <%= text_field_tag(:query, nil, :class => "input-xlarge searchInput") %></center>
 <% end %>
-
-<h1>Now Playing</h1>
-
-<% @now_playing.first(10).each do |movie| %>
-  <% if movie %>
-     <%= link_to movie_path(movie['id']) do %>
-       <%= movie_poster movie['poster_path'] %>
-     <% end %>
-  <% end %>
+      </h2>
+      
+  
+        <h1>
+          Now Playing
+        </h1>
+     
+          
+             <% @now_playing.first(15).each do |movie| %>
+<% if movie %>
+<%= link_to movie_path(movie['id']) do %>
+<%= image_tag("#{@configuration.base_url}w154#{movie['poster_path']}") if movie['poster_path'] %>
+<% end %>
+<% end %>
 <% end %>
