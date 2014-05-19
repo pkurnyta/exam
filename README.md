@@ -3,7 +3,7 @@ Travis:<br/>
 [![Build Status](https://travis-ci.org/pkurnyta/exam.svg?branch=master)](https://travis-ci.org/pkurnyta/exam)
 
 Shelly Cloud:<br/>
-za chwilę...
+http://mymovies-pk.shellyapp.com
 
 Heroku:<br/>
 http://mymovies-pk.herokuapp.com
