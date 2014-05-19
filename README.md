@@ -1,14 +1,16 @@
 <h3>Aplikacja zaliczeniowa - My Movies</h3>
 Travis:<br/>
 [![Build Status](https://travis-ci.org/pkurnyta/exam.svg?branch=master)](https://travis-ci.org/pkurnyta/exam)
-nie wiem co się dzieje, w build 46 działały mi wszystkie testy, teraz przy kazdym wywołaniu nie przechodzi mi 50 (za kazdym razem inne)...
+
+Shelly Cloud:<br/>
+za chwilę...
 
 Heroku:<br/>
 http://mymovies-pk.herokuapp.com
 
 Testy:<br/>
-100 testów (50 dla controllers i 50 dla views).<br/>
-Testy sprawdzają czy zgadzają się wszystkie parametry filmu, aktora itp.
+99 testów (mniej więcej po równo dla controllers i views).<br/>
+Są to bardzo proste testy sprawdzające zgodność stringów, intów, linków itp. 
 
 Autor: <br/>
 Przemysław Kurnyta
