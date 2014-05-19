@@ -1397,3 +1397,16 @@ Processing by MoviesController#show as HTML
   Parameters: {"id"=>"268321"}
   Rendered movies/show.html.erb within layouts/application (4897.4ms)
 Completed 200 OK in 6398ms (Views: 4905.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-19 14:14:03 +0200
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (4156.2ms)
+Completed 200 OK in 4850ms (Views: 4497.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/movies/124905" for 127.0.0.1 at 2014-05-19 14:14:10 +0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"124905"}
+  Rendered movies/show.html.erb within layouts/application (8030.8ms)
+Completed 200 OK in 9540ms (Views: 8069.9ms | ActiveRecord: 0.0ms)

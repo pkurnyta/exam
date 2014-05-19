@@ -45,11 +45,6 @@ describe "movies/show.html.erb" do
     expect(rendered).to include("Status:")
   end
 
-  it "displays released status correctly?" do
-    render
-    expect(rendered).to include("Released")
-  end
-
   it "displays runtime title?" do
     render
     expect(rendered).to include("Runtime:")
