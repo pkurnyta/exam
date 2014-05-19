@@ -17,7 +17,7 @@ describe "movies/show.html.erb" do
 
   it "displays poster correctly?" do
     render
-    expect(rendered).to include("http://image.tmdb.org/t/p/w154/tIdDHXa0FKdveIMFUF9GM28mqAp.jpg")
+    expect(rendered).to include("http://image.tmdb.org/t/p/w154/jFZ1PJAt0Mr2DbvQ1sksPuhCtt7.jpg")
   end
 
   it "displays budget title?" do
@@ -122,8 +122,7 @@ it "displays genres title?" do
 
   it "displays posters correctly?" do
     render
-    expect(rendered).to include("tIdDHXa0FKdveIMFUF9GM28mqAp")
-    expect(rendered).to include("qqO2yoit9t8GCumWq07F9mcYhtL")
+    expect(rendered).to include("jFZ1PJAt0Mr2DbvQ1sksPuhCtt7")
     expect(rendered).to include("3JJmefgV2B683OlIQh6NJYoAJqm")
   end
 

@@ -67,7 +67,7 @@ it "should return if belongs to collection" do
   end
 
   it "should return a poster path" do
-    @movie.poster_path.should eq("/tIdDHXa0FKdveIMFUF9GM28mqAp.jpg")
+    @movie.poster_path.should eq("/jFZ1PJAt0Mr2DbvQ1sksPuhCtt7.jpg")
   end
 
   it "should poster path be string" do
