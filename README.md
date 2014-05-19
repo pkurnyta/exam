@@ -1,8 +1,8 @@
 <h3>Aplikacja zaliczeniowa - My Movies</h3>
-Travis:
+Travis:<br/>
 [![Build Status](https://travis-ci.org/pkurnyta/exam.svg?branch=master)](https://travis-ci.org/pkurnyta/exam)
 
-Heroku:
+Heroku:<br/>
 http://mymovies-pk.herokuapp.com
 
 Testy:<br/>
