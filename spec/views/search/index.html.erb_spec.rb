@@ -11,7 +11,7 @@ describe "search/index.html.erb" do
     expect(rendered).to include("Search results")
   end
 
-  it "displays batman indeed?" do
+  it "displays apocalypto indeed?" do
     render
     expect(rendered).to include("Apocalypto")
   end
